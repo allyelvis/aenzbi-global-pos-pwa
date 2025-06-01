@@ -1,0 +1,97 @@
+[debug] [2025-06-01T16:11:18.773Z] ----------------------------------------------------------------------
+[debug] [2025-06-01T16:11:18.775Z] Command:       /usr/local/nvm/versions/node/v20.18.0/bin/node /usr/local/node_packages/node_modules/.bin/firebase init
+[debug] [2025-06-01T16:11:18.776Z] CLI Version:   13.13.3
+[debug] [2025-06-01T16:11:18.776Z] Platform:      linux
+[debug] [2025-06-01T16:11:18.777Z] Node Version:  v20.18.0
+[debug] [2025-06-01T16:11:18.777Z] Time:          Sun Jun 01 2025 16:11:18 GMT+0000 (Coordinated Universal Time)
+[debug] [2025-06-01T16:11:18.777Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-06-01T16:11:18.783Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/admin_/aenzbi-global-pos-pwa
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2025-06-01T16:11:39.059Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2025-06-01T16:11:39.567Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2025-06-01T16:11:39.568Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Don't want to scroll through all your projects? If you know your project ID, you can initialize it directly using firebase init --project <project_id>.
+ 
+[info] i  Using project aenzbi-global-pos (Aenzbi Global POS) 
+[info] 
+=== Database Setup
+[info] i  database: ensuring required API firebasedatabase.googleapis.com is enabled... 
+[debug] [2025-06-01T16:11:52.815Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/aenzbi-global-pos/services/firebasedatabase.googleapis.com [none]
+[debug] [2025-06-01T16:11:52.816Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/aenzbi-global-pos/services/firebasedatabase.googleapis.com x-goog-quota-user=projects/aenzbi-global-pos
+[debug] [2025-06-01T16:11:53.646Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/aenzbi-global-pos/services/firebasedatabase.googleapis.com 200
+[debug] [2025-06-01T16:11:53.646Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/aenzbi-global-pos/services/firebasedatabase.googleapis.com [omitted]
+[info] ✔  database: required API firebasedatabase.googleapis.com is enabled 
+[info] 
+[debug] [2025-06-01T16:11:53.648Z] >>> [apiv2][query] GET https://firebasedatabase.googleapis.com/v1beta/projects/aenzbi-global-pos/locations/-/instances/aenzbi-global-pos-default-rtdb [none]
+[debug] [2025-06-01T16:11:54.351Z] <<< [apiv2][status] GET https://firebasedatabase.googleapis.com/v1beta/projects/aenzbi-global-pos/locations/-/instances/aenzbi-global-pos-default-rtdb 403
+[debug] [2025-06-01T16:11:54.351Z] <<< [apiv2][body] GET https://firebasedatabase.googleapis.com/v1beta/projects/aenzbi-global-pos/locations/-/instances/aenzbi-global-pos-default-rtdb {"error":{"code":403,"message":"Your application is authenticating by using local Application Default Credentials. The firebasedatabase.googleapis.com API requires a quota project, which is not set by default. To learn how to set your quota project, see https://cloud.google.com/docs/authentication/adc-troubleshooting/user-creds .","status":"PERMISSION_DENIED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"SERVICE_DISABLED","domain":"googleapis.com","metadata":{"service":"firebasedatabase.googleapis.com","consumer":"projects/618104708054"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"Your application is authenticating by using local Application Default Credentials. The firebasedatabase.googleapis.com API requires a quota project, which is not set by default. To learn how to set your quota project, see https://cloud.google.com/docs/authentication/adc-troubleshooting/user-creds ."}]}}
+[debug] [2025-06-01T16:11:54.352Z] HTTP Error: 403, Your application is authenticating by using local Application Default Credentials. The firebasedatabase.googleapis.com API requires a quota project, which is not set by default. To learn how to set your quota project, see https://cloud.google.com/docs/authentication/adc-troubleshooting/user-creds .
+[debug] [2025-06-01T16:11:54.353Z] FirebaseError: HTTP Error: 403, Your application is authenticating by using local Application Default Credentials. The firebasedatabase.googleapis.com API requires a quota project, which is not set by default. To learn how to set your quota project, see https://cloud.google.com/docs/authentication/adc-troubleshooting/user-creds .
+    at responseToError (/usr/local/node_packages/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/usr/local/node_packages/node_modules/firebase-tools/lib/apiv2.js:305:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get instance details for instance: aenzbi-global-pos-default-rtdb. See firebase-debug.log for more details.
+[debug] [2025-06-01T16:13:31.704Z] ----------------------------------------------------------------------
+[debug] [2025-06-01T16:13:31.706Z] Command:       /usr/local/nvm/versions/node/v20.18.0/bin/node /usr/local/node_packages/node_modules/.bin/firebase init hosting
+[debug] [2025-06-01T16:13:31.707Z] CLI Version:   13.13.3
+[debug] [2025-06-01T16:13:31.707Z] Platform:      linux
+[debug] [2025-06-01T16:13:31.707Z] Node Version:  v20.18.0
+[debug] [2025-06-01T16:13:31.707Z] Time:          Sun Jun 01 2025 16:13:31 GMT+0000 (Coordinated Universal Time)
+[debug] [2025-06-01T16:13:31.708Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-06-01T16:13:31.714Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/admin_/aenzbi-global-pos-pwa
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2025-06-01T16:13:36.499Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2025-06-01T16:13:37.018Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2025-06-01T16:13:37.018Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Don't want to scroll through all your projects? If you know your project ID, you can initialize it directly using firebase init --project <project_id>.
+ 
+[info] i  Using project aenzbi-global-pos (Aenzbi Global POS) 
+[info] 
+=== Hosting Setup
+[debug] [2025-06-01T16:13:50.330Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/aenzbi-global-pos [none]
+[debug] [2025-06-01T16:13:50.602Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/aenzbi-global-pos 403
+[debug] [2025-06-01T16:13:50.602Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/aenzbi-global-pos {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2025-06-01T16:13:50.603Z] HTTP Error: 403, The caller does not have permission
+[debug] [2025-06-01T16:13:50.604Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at responseToError (/usr/local/node_packages/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/usr/local/node_packages/node_modules/firebase-tools/lib/apiv2.js:305:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get Firebase project aenzbi-global-pos. Please make sure the project exists and your account has permission to access it.
